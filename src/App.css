@@ -1,38 +1,101 @@
 .App {
-  text-align: center;
+    text-align: center;
+    margin: auto;
+    max-width: 1000px;
 }
-
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    height: 40vmin;
+    pointer-events: none;
+}
+.header {
+    margin: 30px 0;
+    padding: 0 30px;
+}
+h1 {
+    font-weight: 500;
+    margin: 0;
+}
+h2 {
+    margin: 0;
+    font-weight: 400;
+    text-align: left;
+}
+.stages {
+    display: flex;
+    justify-content: space-around;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.stage {
+    flex-basis: 20%;
+}
+.cards {
+    height: 100%;
+    border-left: 1px solid gainsboro;
+    border-right: 1px solid gainsboro;
+    border-top: 2px solid gainsboro;
+}
+.tooltip {
+    position: absolute;
+    width: 180px;
+    padding: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: calc(100%);
+    background-color: white;
+    box-shadow: 0 0 10px 0 black;
+    z-index: 1;
+    visibility: hidden;
+}
+.tooltip.last {
+    right: calc(100%);
+    left: auto;
+}
+.tooltip.last:before {
+    right: -5px;
+    left: auto;
+}
+.tooltip:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    margin-left: -4px;
+    margin-top: -4px;
+    top: 50%;
+    left: 0;
+    transform: rotate(45deg);
+    box-sizing: border-box;
+    border: 4px solid white;
+    transform-origin: 50% 50%;
+}
+.tooltip:hover {
+    visibility: visible;
+}
+.card {
+    position: relative;
+    background-color: gainsboro;
+    padding: 10px;
+    margin: 6px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.card:hover {
+    background-color: darkgray;
+}
+.card:hover .tooltip {
+    visibility: visible;
+}
+.title {
+    color: darkturquoise;
+    padding: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.gray {
+    color: gray;
 }
-
-.App-link {
-  color: #61dafb;
+.red {
+    color: red;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.blue {
+    color: blue;
 }
