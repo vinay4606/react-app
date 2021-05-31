@@ -1,14 +1,13 @@
 .App {
     text-align: center;
-    margin: auto;
-    max-width: 1000px;
+    margin: 20px auto;
+    max-width: 1100px;
 }
 .App-logo {
     height: 40vmin;
     pointer-events: none;
 }
 .header {
-    margin: 30px 0;
     padding: 0 30px;
 }
 h1 {
@@ -22,7 +21,7 @@ h2 {
 }
 .stages {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .stage {
@@ -30,9 +29,6 @@ h2 {
 }
 .cards {
     height: 100%;
-    border-left: 1px solid gainsboro;
-    border-right: 1px solid gainsboro;
-    border-top: 2px solid gainsboro;
 }
 .tooltip {
     position: absolute;
@@ -51,7 +47,7 @@ h2 {
     left: auto;
 }
 .tooltip.last:before {
-    right: -5px;
+    right: -4px;
     left: auto;
 }
 .tooltip:before {
@@ -75,19 +71,27 @@ h2 {
     position: relative;
     background-color: gainsboro;
     padding: 10px;
-    margin: 6px;
-    cursor: pointer;
+    margin: 10px;
+    cursor: move;
     text-transform: uppercase;
 }
 .card:hover {
     background-color: darkgray;
 }
 .card:hover .tooltip {
-    visibility: visible;
+    visibility: hidden;
 }
 .title {
-    color: darkturquoise;
-    padding: 10px;
+    color: darkblue;
+    padding: 20px;
+    font-weight: 700;
+}
+img {
+    max-width: 100%;
+}
+.divider {
+    border-top: 2px solid darkgray;
+    margin: 10px 0;
 }
 
 .gray {
@@ -98,4 +102,7 @@ h2 {
 }
 .blue {
     color: blue;
+}
+.hidden {
+    visibility: hidden;
 }
